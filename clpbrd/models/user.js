@@ -33,6 +33,11 @@ var UserSchema = new Schema(
             type: Boolean,
             default: false
         },
+        emailChangeCandidate: {
+            type: String,
+            isEmail: true,
+            description: 'A still-unconfirmed email address that this user wants to change to (if relevant).'
+        },        
         username: {
             type: String,
             unique: true,
